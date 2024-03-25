@@ -10,14 +10,16 @@ The data pipeline consists of two main components:
 
 ## How It Works
 
-1. **CSV Upload*![Uploading Diagramme sans nom.drawio (2).png…]()
-*: A CSV file containing raw tennis betting data is uploaded to a specified Google Cloud Storage bucket using the `upload_data_to_blob_storage.py` script.
+1. **CSV Upload**: A CSV file containing raw tennis betting data is uploaded to a specified Google Cloud Storage bucket using the [upload_data_to_blob_storage.py](upload_data_to_blob_storage.py)  script.
 
 2. **Cloud Storage Trigger**: The upload of the CSV file to the Cloud Storage bucket triggers a Cloud Function.
 
-3. **Cloud Function Execution**: The Cloud Function, defined in `main.py`, is executed in response to the Cloud Storage event. The function's entry point, `pipeline`, is invoked.
+3. **Cloud Function Execution**: The Cloud Function, defined in [main.py](main.py), is executed in response to the Cloud Storage event. The function's entry point, `pipeline`, is invoked.
 
-4. **Data Processing**: The `pipeline` function extracts the raw data from the uploaded CSV file, transforms it into the desired format using the `TennisBet` class and associated functions, and loads it into a BigQuery table.
+4. **Data Processing**: The `pipeline` function extracts the raw data from the uploaded CSV file from google storage bucket, transforms it into the data model, and loads it into a BigQuery table.
+
+**Pipeline diagram**
+![Pipeline diagram](Pipeline.png)
 
 ## Project Structure
 
@@ -31,16 +33,19 @@ The data pipeline consists of two main components:
 To use this project, follow these steps:
 
 1. Clone the repository to your local machine:
-[Project Repository](https://github.com/amiramsadek12/Modeo)
+    ```bash
+    git clone https://github.com/amiramsadek12/Modeo
+    ```
 
 2. Install the required Python dependencies:
-```pip install -r requirements.txt```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 3. Copy the `api.json` file to the project directory so the scripts can work.
 
 4. Run the `upload_data_to_blob_storage.py` script to upload a CSV file to the specified Google Cloud Storage bucket:
-```python upload_data_to_blob_storage.py --source_file_name path/to/your/csv/file.csv```
-
-## Pipeline Diagram: 
-![pipeline diagram](https://github.com/amiramsadek12/Modeo/assets/125670249/c1485143-293f-41b4-a9cc-5cfc7777e513)
+    ```bash
+    python upload_data_to_blob_storage.py --source_file_name path/to/your/csv/file.csv
+    ```
 
