@@ -41,4 +41,6 @@ To use this project, follow these steps:
 4. Run the `upload_data_to_blob_storage.py` script to upload a CSV file to the specified Google Cloud Storage bucket:
 ```python upload_data_to_blob_storage.py --source_file_name path/to/your/csv/file.csv```
 
-![pipeline diagram](https://github.com/amiramsadek12/Modeo/assets/125670249/f741e749-4332-4696-b818-3d2b0c6508d0)
+## Pipeline Diagram: 
+![pipeline diagram](https://github.com/amiramsadek12/Modeo/assets/125670249/c1485143-293f-41b4-a9cc-5cfc7777e513)
+
