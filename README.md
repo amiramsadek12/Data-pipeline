@@ -33,10 +33,10 @@ To use this project, follow these steps:
 [Project Repository](https://github.com/amiramsadek12/Modeo)
 
 2. Install the required Python dependencies:
-pip install -r requirements.txt
+'''pip install -r requirements.txt'''
 
 3. Copy the `api.json` file to the project directory so the scripts can work.
 
 4. Run the `upload_data_to_blob_storage.py` script to upload a CSV file to the specified Google Cloud Storage bucket:
-python upload_data_to_blob_storage.py --source_file_name path/to/your/csv/file.csv
+'''python upload_data_to_blob_storage.py --source_file_name path/to/your/csv/file.csv'''
 
