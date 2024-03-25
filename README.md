@@ -10,7 +10,8 @@ The data pipeline consists of two main components:
 
 ## How It Works
 
-1. **CSV Upload**: A CSV file containing raw tennis betting data is uploaded to a specified Google Cloud Storage bucket using the `upload_data_to_blob_storage.py` script.
+1. **CSV Upload*![Uploading Diagramme sans nom.drawio (2).png…]()
+*: A CSV file containing raw tennis betting data is uploaded to a specified Google Cloud Storage bucket using the `upload_data_to_blob_storage.py` script.
 
 2. **Cloud Storage Trigger**: The upload of the CSV file to the Cloud Storage bucket triggers a Cloud Function.
 
@@ -40,3 +41,4 @@ To use this project, follow these steps:
 4. Run the `upload_data_to_blob_storage.py` script to upload a CSV file to the specified Google Cloud Storage bucket:
 ```python upload_data_to_blob_storage.py --source_file_name path/to/your/csv/file.csv```
 
+![pipeline diagram](https://github.com/amiramsadek12/Modeo/assets/125670249/f741e749-4332-4696-b818-3d2b0c6508d0)
